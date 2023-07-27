@@ -78,7 +78,7 @@ FROM
     ON a.userID = b.userID
 WHERE b.date >= a.date;
 
--- 统计每天的用户留存情况，计算留存1到留存8的用户数
+-- 统计每天的用户留存情况，计算留存1日到留存8日的用户数
 DROP VIEW IF EXISTS user_remain_view;
 CREATE VIEW user_remain_view AS
 SELECT
