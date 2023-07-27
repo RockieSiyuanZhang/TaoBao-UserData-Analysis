@@ -278,9 +278,9 @@ SELECT
   COUNT(DISTINCT userId) AS user_count
 FROM path_base_view
 GROUP BY
-  CONCAT(IFNULL(lag_4, '空'), '-', 
-         IFNULL(lag_3, '空'), '-', 
-         IFNULL(lag_2, '空'), '-',
-         IFNULL(lag_1, '空'), '-', 
+  CONCAT(IFNULL(lag_4, 'emp'), '-', 
+         IFNULL(lag_3, 'emp'), '-', 
+         IFNULL(lag_2, 'emp'), '-',
+         IFNULL(lag_1, 'emp'), '-', 
          type)
 ORDER BY user_count DESC;
